@@ -20,7 +20,7 @@ RUN apk add --no-cache \
 
 	&& git clone git://erdgeist.org/opentracker \
 		&& cd opentracker \
-		sed -i 's/#FEATURES+=-DWANT_IP_FROM_PROXY/FEATURES+=-DWANT_IP_FROM_PROXY/' Makefile && \
+		&& sed -i 's/#FEATURES+=-DWANT_IP_FROM_PROXY/FEATURES+=-DWANT_IP_FROM_PROXY/' Makefile \
 		&& make \
 
 	&& mv /tmp/opentracker/opentracker /bin/ \
